@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HOTEC: Registro de Habitaciones</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styleh.css">
+</head>
+<body>
+  <nav class="top-bar">
+  <div class="top-bar-title">
+    <img src="LogoH.png" alt="Logotipo" class="logo">
+    <a href="#"><strong>Servicio HOTEC</strong></a>
+  </div>
+  <div class="topbar-responsive-links">
+    <ul class="menu simple">
+      <li><a href="HOTEC.html">Menú Principal</a></li>
+      <li><a href="check_out.html">Check -Out</a></li>
+      <li><a href="HOTEC_PW.html">Reservas</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <h2>Registrar Habitación</h2>
+  <form id="form-registro" method="POST" action="R_Habit.php">
+    <label for="numero">Número de Habitación:</label>
+    <select id="numero" name="numero" required>
+      <!-- Opciones cargadas desde PHP con fetch -->
+    </select>
+
+    <label for="num_h">Número de Huéspedes:</label>
+    <input type="number" id="num_h" name="num_h" placeholder="Huéspedes a Registrar" required>
+
+    <label for="tipo">Tipo de habitación:</label>
+    <select id="tipo" name="tipo" required>
+      <option value="Suite">Suite</option>
+      <option value="Doble">Doble</option>
+      <option value="Simple">Simple</option>
+    </select>
+
+    <button type="submit" name="accion" value="registrar">Registrar</button>
+  </form>
+
+  <h3>Estado Actual de Habitaciones</h3>
+  <div id="tabla-habitaciones">
+   
+  </div>
+
+  <script>
+    fetch('get_habitaciones_disponibles.php')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("numero").innerHTML = data;
+      });
+
+    fetch('tabla_habitaciones.php')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("tabla-habitaciones").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

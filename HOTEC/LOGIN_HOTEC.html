@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styleh.css">
+  <script src="js/script.js"></script>
+  <link rel="icon" href="LogoH.png" type="image/png">
+  <title>Registro HOTEC</title>
+</head>
+<body>
+
+<nav class="top-bar">
+  <div class="top-bar-title">
+    <img src="LogoH.png" alt="Logotipo" class="logo">
+    <a href="#"><strong>Servicio HOTEC</strong></a>
+  </div>
+  <div class="topbar-responsive-links">
+    <ul class="menu simple">
+      <li><a href="HOTEC.html">Menu Principal</a></li>
+      <li><a href="INICIO_HOTEC.html">Iniciar Sesion</a></li>
+    </ul>
+  </div>
+</nav> 
+
+<div class="hero-section">
+  <div class="hero-section-text">
+    <h1>Bienvenido a HOTEC</h1>
+    <h5>Reserva rápida y sencilla desde cualquier lugar</h5>
+  </div>
+</div>
+
+
+
+  <form id="login-form" action="base_login.php" method="POST">
+    <h3>Login HOTEC</h3>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="ejemplo@email.com" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+<footer>
+  <p>&copy; 2025 HOTEC. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

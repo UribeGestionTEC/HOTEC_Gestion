@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styleh.css">
+  <script src="js/script.js"></script>
+  <link rel="icon" href="LogoH.png" type="image/png">
+  <title>Check-Out</title>
+ 
+</head>
+<body>
+
+<nav class="top-bar">
+  <div class="top-bar-title">
+    <img src="LogoH.png" alt="Logotipo" class="logo">
+    <a href="#"><strong>Servicio HOTEC</strong></a>
+  </div>
+  <div class="topbar-responsive-links">
+    <ul class="menu simple">
+      <li><a href="HOTEC.html">Menú Principal</a></li>
+      <li><a href="Habit_Hotec.html">Tipos de Habitaciones</a></li>
+      <li><a href="INICIO_HOTEC.html">Iniciar Sesión</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h2>Check-Out de Huéspedes</h2>
+
+<form method="POST" action="check_out.php">
+  <label for="nombre">Nombre:</label>
+  <input type="text" name="nombre" id="nombre" placeholder="Nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo letras y espacios">
+
+  <label for="apellido">Apellido:</label>
+  <input type="text" name="apellido" id="apellido" placeholder="Apellido" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo letras y espacios">
+
+  <label for="ID">ID:</label>
+  <input type="number" name="ID_Reserva" id="ID_Reserva" placeholder="ID de reserva" required>
+
+  <label for="fecha">Fecha de Check-Out:</label>
+  <input type="date" name="fecha" id="fecha" required>
+
+
+  <button type="submit" name="checkout">Realizar Check-Out</button>
+</form>
+
+</body>
+</html>

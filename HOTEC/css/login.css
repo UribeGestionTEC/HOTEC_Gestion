@@ -1,0 +1,74 @@
+    body, html {
+      background-color: #1b1b1b;
+      color: #e0e0e0;
+      font-family: ' Times', sans-serif;
+    }
+
+    .top-bar {
+      background-color: #2a2a2a;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top-bar .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .top-bar a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    .hero-section {
+      background-image: url('HRH.jpeg');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 50px;
+      text-align: center;
+    }
+
+    .hero-section-text h1 {
+      color: #ffcc00;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px #000000;
+    }
+
+    .translucent-form-overlay {
+      background-color: rgba(46, 46, 46, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0px 0px 15px rgb(255, 255, 8);
+    }
+
+    .translucent-form-overlay input, .translucent-form-overlay select {
+      background-color: #3a3a3a;
+      border: none;
+      padding: 10px;
+      color: #e0e0e0;
+      margin-bottom: 10px;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    
+    .translucent-form-overlay button {
+      background-color: #ffcc00;
+      color: #1b1b1b;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #2a2a2a;
+      color: #e0e0e0;
+      padding: 30px 0;
+      text-align: center;
+    }
