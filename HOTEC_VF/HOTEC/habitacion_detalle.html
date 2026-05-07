@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de habitación</title>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<a class="btn-volver" href="index.html">← Volver al inicio</a>
+
+<hr>
+
+<h1 id="titulo">Habitación</h1>
+
+<img id="imagen" style="max-width:400px;">
+
+<p id="descripcion"></p>
+
+<br>
+
+<a id="btnReservar" style="padding:10px 20px; background:black; color:white;">
+    Reservar ahora
+</a>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const data = {
+    1: {
+        nombre: "Habitación Simple",
+        desc: "Ideal para una persona con comodidades básicas.",
+        img: "assets/img/simple.jpeg"
+    },
+    2: {
+        nombre: "Habitación Doble",
+        desc: "Perfecta para dos personas con mayor comodidad.",
+        img: "assets/img/Doble.jpeg"
+    },
+    3: {
+        nombre: "Suite",
+        desc: "Habitación de lujo con sala y jacuzzi.",
+        img: "assets/img/SUITE.jpeg"
+    }
+};
+
+if(data[id]){
+    document.getElementById("titulo").innerText = data[id].nombre;
+    document.getElementById("descripcion").innerText = data[id].desc;
+    document.getElementById("imagen").src = data[id].img;
+    document.getElementById("btnReservar").href = "reservar.html?tipo=" + id;
+}
+</script>
+
+</body>
+</html>
